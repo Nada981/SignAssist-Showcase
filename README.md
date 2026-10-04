@@ -1,18 +1,30 @@
+أيوة بالضبط، انسخي النص كله، بس **السر كله في الرموز الصغيرة** (علامات الشباك `##` والشرطات `-` وعلامات `````) لأن هي دي اللي بتخلي GitHub يفهم إن ده عنوان أو نقط مش كلام عادي سايح في بعضه.
+
+خدي النص ده **Copy** بالظبط من أول علامة الشباك لحد آخر كلمة:
+
+```markdown
 # SignAssist AI: Video-to-Sign Language Avatar & Accessibility Platform
 
 An end-to-end accessibility solution designed to empower people with disabilities through AI-driven assistive tools. The platform enables users to upload video content, which is processed asynchronously through a computer vision and sequence translation pipeline to generate a synchronized sign language avatar translation, accompanied by an AI assistant for accessible locations.
 
 > **Note:** The source code is private due to graduation project policies and intellectual property. The system architecture, features, and pipeline overview are documented below.
-Key Features
-Automated Video-to-Sign Translation: Users upload standard videos; the platform extracts audio/visual cues, processes the content through a translation model, and delivers the video accompanied by an animated sign language avatar.
 
-Asynchronous Processing Pipeline: Efficient handling of video ingestion, sequence parsing, and avatar rendering workflows.
+```
 
-Accessibility Geo-Assistant: Intelligent assistant helping users identify wheelchair-accessible venues and ramps.
+---
 
-Inclusive Community: Dedicated platform for peer connection and sharing accessible location reviews.
+## Key Features
 
-Pipeline Overview
+* **Automated Video-to-Sign Translation:** Users upload standard videos; the platform extracts audio/visual cues, processes the content through a translation model, and delivers the video accompanied by an animated sign language avatar.
+* **Asynchronous Processing Pipeline:** Efficient handling of video ingestion, sequence parsing, and avatar rendering workflows.
+* **Accessibility Geo-Assistant:** Intelligent assistant helping users identify wheelchair-accessible venues and ramps.
+* **Inclusive Community:** Dedicated platform for peer connection and sharing accessible location reviews.
+
+---
+
+## Pipeline Overview
+
+```text
 [ User Video Upload ]
          │
          ▼
@@ -26,12 +38,25 @@ Pipeline Overview
          │
          ▼
 [ Processed Video Delivery to User ]
-Tech Stack
-Core & AI Processing: Python, OpenCV, MediaPipe / PyTorch
 
-API Framework: FastAPI, Pydantic
+```
 
-Containerization & Version Control: Docker, Git
+---
 
-Author
+## Tech Stack
+
+* **Core & AI Processing:** Python, OpenCV, MediaPipe / PyTorch
+* **API Framework:** FastAPI, Pydantic
+* **Containerization & Version Control:** Docker, Git
+
+---
+
+## Author
+
 Developed with a focus on Applied AI Engineering and Assistive Technologies.
+
+```
+
+الصقيه مكان الكلام القديم، ودوسي **Commit changes** عشان تشوفي النتيجة.
+
+```
