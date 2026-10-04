@@ -1,11 +1,9 @@
-```markdown
 # SignAssist AI: Video-to-Sign Language Avatar & Accessibility Platform
 
 An end-to-end accessibility solution designed to empower people with disabilities through AI-driven assistive tools. The platform enables users to upload video content, which is processed asynchronously through a computer vision and sequence translation pipeline to generate a synchronized sign language avatar translation, accompanied by an AI assistant for accessible locations.
 
 > **Note:** The source code is private due to graduation project policies and intellectual property. The system architecture, features, and pipeline overview are documented below.
 
-```
 
 ---
 
