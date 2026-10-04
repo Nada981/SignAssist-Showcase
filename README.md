@@ -1,7 +1,3 @@
-أيوة بالضبط، انسخي النص كله، بس **السر كله في الرموز الصغيرة** (علامات الشباك `##` والشرطات `-` وعلامات `````) لأن هي دي اللي بتخلي GitHub يفهم إن ده عنوان أو نقط مش كلام عادي سايح في بعضه.
-
-خدي النص ده **Copy** بالظبط من أول علامة الشباك لحد آخر كلمة:
-
 ```markdown
 # SignAssist AI: Video-to-Sign Language Avatar & Accessibility Platform
 
@@ -54,9 +50,3 @@ An end-to-end accessibility solution designed to empower people with disabilitie
 ## Author
 
 Developed with a focus on Applied AI Engineering and Assistive Technologies.
-
-```
-
-الصقيه مكان الكلام القديم، ودوسي **Commit changes** عشان تشوفي النتيجة.
-
-```
