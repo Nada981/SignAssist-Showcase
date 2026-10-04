@@ -1,16 +1,17 @@
-# SignAssist AI: Video-to-Sign Language Avatar & Accessibility Platform
+# SignAssist AI: Egyptian Sign Language (ESL) Avatar & Accessibility Platform
 
-An end-to-end accessibility solution designed to empower people with disabilities through AI-driven assistive tools. The platform enables users to upload video content, which is processed asynchronously through a computer vision and sequence translation pipeline to generate a synchronized sign language avatar translation, accompanied by an AI assistant for accessible locations.
+An end-to-end accessibility solution designed to empower people with hearing and speech disabilities through AI-driven assistive tools. The platform enables users to upload video content, extracts spoken audio, and asynchronously translates Egyptian Arabic speech into synchronized 3D Egyptian Sign Language (ESL) avatar animations using predefined skeletal motion keypoints (JSON mapping).
 
-> **Note:** The source code is private due to graduation project policies and intellectual property. The system architecture, features, and pipeline overview are documented below.
+> **Note:** The source code is private due to graduation project policies and intellectual property. The system architecture, animation pipeline, and features are documented below.
 
 
 ---
 
 ## Key Features
 
-* **Automated Video-to-Sign Translation:** Users upload standard videos; the platform extracts audio/visual cues, processes the content through a translation model, and delivers the video accompanied by an animated sign language avatar.
-* **Asynchronous Processing Pipeline:** Efficient handling of video ingestion, sequence parsing, and avatar rendering workflows.
+* **Speech-to-ESL Translation:** Extracts spoken Egyptian Arabic dialogue from uploaded videos and transcribes it via Speech-to-Text (STT).
+* **JSON Skeletal Motion Mapping:** Matches recognized terms to corresponding 3D skeleton keypoint coordinates stored in structured JSON dictionaries to drive realistic avatar gestures.
+* **Asynchronous Video Processing:** Efficient queue and processing pipeline handling video ingestion, audio extraction, sign gloss mapping, and avatar rendering.
 * **Accessibility Geo-Assistant:** Intelligent assistant helping users identify wheelchair-accessible venues and ramps.
 * **Inclusive Community:** Dedicated platform for peer connection and sharing accessible location reviews.
 
@@ -22,16 +23,19 @@ An end-to-end accessibility solution designed to empower people with disabilitie
 [ User Video Upload ]
          │
          ▼
-[ Video & Audio Ingestion / Extraction ]
+[ Audio Extraction & Egyptian Arabic STT ]
          │
          ▼
-[ NLP & Sign Gloss Sequence Mapping ]
+[ NLP Text Parsing & Word Alignment ]
          │
          ▼
-[ 3D Avatar Translation & Rendering ]
+[ JSON Skeleton Coordinates Retrieval ]
          │
          ▼
-[ Processed Video Delivery to User ]
+[ 3D Avatar Motion Animation & Rendering ]
+         │
+         ▼
+[ Final Synchronized Video Delivery ]
 
 ```
 
@@ -39,7 +43,8 @@ An end-to-end accessibility solution designed to empower people with disabilitie
 
 ## Tech Stack
 
-* **Core & AI Processing:** Python, OpenCV, MediaPipe / PyTorch
+* **Audio & Speech Processing:** Python, Speech-to-Text (STT) Pipelines
+* **Animation & Data Structure:** JSON (3D Skeletal Motion Keypoints), Blender / 3D Avatar Engine
 * **API Framework:** FastAPI, Pydantic
 * **Containerization & Version Control:** Docker, Git
 
