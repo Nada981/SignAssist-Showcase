@@ -55,6 +55,5 @@ An end-to-end accessibility platform engineered to bridge communication and stru
 
 © 2025/2026 Taraf Team. All rights reserved.
 
-*All codebase components, dataset mappings, and proprietary 3D skeletal motion files remain private and subject to academic IP guidelines.*
-
+All codebase components, dataset mappings, and proprietary 3D skeletal motion files remain private and subject to academic IP guidelines.
 ```
