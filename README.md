@@ -56,6 +56,3 @@ Taraf is an advanced end-to-end accessibility platform designed to bridge commun
 © 2025/2026 Taraf Development. All rights reserved.
 
 *All codebase components, proprietary dataset mappings, and 3D skeletal motion files remain private.*
-
-
-```
