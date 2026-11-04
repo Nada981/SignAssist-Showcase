@@ -1,55 +1,60 @@
-# SignAssist AI: Egyptian Sign Language (ESL) Avatar & Accessibility Platform
+# Taraf (SignAssist): Egyptian Sign Language (ESL) Avatar & Accessibility Ecosystem
 
-An end-to-end accessibility solution designed to empower people with hearing and speech disabilities through AI-driven assistive tools. The platform enables users to upload video content, extracts spoken audio, and asynchronously translates Egyptian Arabic speech into synchronized 3D Egyptian Sign Language (ESL) avatar animations using predefined skeletal motion keypoints (JSON mapping).
+An end-to-end accessibility platform engineered to bridge communication and structural barriers for individuals with hearing, speech, and motor disabilities. The ecosystem seamlessly integrates an AI-driven video-to-3D sign translation pipeline with an intelligent accessibility geo-assistant and a dedicated social community.
 
-> **Note:** The source code is private due to graduation project policies and intellectual property. The system architecture, animation pipeline, and features are documented below.
-
-
----
-
-## Key Features
-
-* **Speech-to-ESL Translation:** Extracts spoken Egyptian Arabic dialogue from uploaded videos and transcribes it via Speech-to-Text (STT).
-* **JSON Skeletal Motion Mapping:** Matches recognized terms to corresponding 3D skeleton keypoint coordinates stored in structured JSON dictionaries to drive realistic avatar gestures.
-* **Asynchronous Video Processing:** Efficient queue and processing pipeline handling video ingestion, audio extraction, sign gloss mapping, and avatar rendering.
-* **Accessibility Geo-Assistant:** Intelligent assistant helping users identify wheelchair-accessible venues and ramps.
-* **Inclusive Community:** Dedicated platform for peer connection and sharing accessible location reviews.
+> **Note:** The source code and custom motion dataset are private due to university graduation project policies and intellectual property restrictions. The overall system architecture, conceptual pipeline, and core feature sets are documented below for demonstration purposes.
 
 ---
 
-## Pipeline Overview
+## 🔑 Key Features
+
+- **Speech-to-3D ESL Translation:** Processes uploaded media, transcribes Egyptian Arabic audio, and streams synchronized 3D Egyptian Sign Language avatar animations in real time.
+- **Dynamic Multi-Tier Motion Mapping:** A hybrid NLP fallback engine that maps transcribed text to structured 3D skeletal keypoint data (`Pose`, `Face`, `Hands`) using multi-level granularity (Full-Sentence, Word-Level, and Letter Spelling).
+- **Asynchronous Chunked Streaming:** A resilient backend architecture designed for long-video processing, featuring video re-encoding, automated chunk segmentation, and asynchronous background worker queues.
+- **RAG Accessibility Geo-Assistant:** An intelligent conversational assistant powered by a Multi-LLM fallback mechanism to recommend verified wheelchair-accessible venues and places in Egypt with automatic Google Maps routing.
+- **Inclusive Social Community:** A secure, interactive social space supporting custom user profiles, anonymous post sharing, and peer reviews regarding accessibility infrastructure.
+
+---
+
+## 🏗️ High-Level System Architecture
 
 ```text
-[ User Video Upload ]
-         │
-         ▼
-[ Audio Extraction & Egyptian Arabic STT ]
-         │
-         ▼
-[ NLP Text Parsing & Word Alignment ]
-         │
-         ▼
-[ JSON Skeleton Coordinates Retrieval ]
-         │
-         ▼
-[ 3D Avatar Motion Animation & Rendering ]
-         │
-         ▼
-[ Final Synchronized Video Delivery ]
+[ User Video Upload / Media Ingestion ]
+                 │
+                 ▼
+[ Background Processing & Chunking Pipeline ]
+                 │
+                 ▼
+[ Egyptian Arabic Speech-to-Text Transcriber ]
+                 │
+                 ▼
+[ Semantic Text Normalization & Hybrid NLP Matcher ]
+                 │
+                 ▼
+[ Skeletal Motion Coordinate Resolver (JSON Timeline) ]
+                 │
+                 ▼
+[ 3D Avatar Rendering Engine & Real-Time Sync ]
 
 ```
 
 ---
 
-## Tech Stack
+## 🛠️ Technology Stack Overview
 
-* **Audio & Speech Processing:** Python, Speech-to-Text (STT) Pipelines
-* **Animation & Data Structure:** JSON (3D Skeletal Motion Keypoints), Blender / 3D Avatar Engine
-* **API Framework:** FastAPI, Pydantic
-* **Containerization & Version Control:** Docker, Git
+* **Mobile & Front-End:** Flutter (Cross-platform UI) & Unity 3D Engine (Skeleton Visualizer)
+* **AI Core & NLP:** Speech-to-Text Transcriber, Semantic Sentence Transformers (XLM-RoBERTa), Arabic Text Normalization
+* **Backend Infrastructure:** Python, FastAPI, Pydantic, Background Tasks Architecture
+* **Database & Security:** Supabase Engine (Row-Level Security, Auth, Relational Schema)
+* **Language Models (RAG Engine):** Retrieval-Augmented Generation using Multi-LLM Failover Router (Gemini, Grok, Cohere)
+* **Containerization & Deployment:** Docker, Hugging Face Spaces
 
 ---
 
-## Author
+## 📄 License & Intellectual Property
 
-Developed with a focus on Applied AI Engineering and Assistive Technologies.
+© 2025/2026 Taraf Team. All rights reserved.
+
+*All codebase components, dataset mappings, and proprietary 3D skeletal motion files remain private and subject to academic IP guidelines.*
+
+```
